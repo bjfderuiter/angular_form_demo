@@ -1,0 +1,24 @@
+<div formGroupName="userData">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input
+      type="text"
+      id="username"
+      formControlName="username"
+      class="form-control">
+    <span
+      *ngIf="!formElement.get('userData.username').valid && formElement.get('userData.username').touched"
+      class="help-block">Please enter a valid username!</span>
+  </div>
+  <div class="form-group">
+    <label for="email">email</label>
+    <input
+      type="text"
+      id="email"
+      formControlName="email"
+      class="form-control">
+    <span
+      *ngIf="!formElement.get('userData.email').valid && formElement.get('userData.email').touched"
+      class="help-block">Please enter a valid email!</span>
+  </div>
+</div>
